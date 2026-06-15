@@ -144,6 +144,12 @@ section { padding: 5rem 0; }
 .project-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .project-tags span { background: var(--tag-bg); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: 500; }
+/* ===== CLICKABLE CARDS / TIMELINE ===== */
+.project-card[data-href], .timeline-item[data-href] { cursor: pointer; }
+.project-card[data-href]:hover h3, .timeline-item[data-href]:hover .timeline-company { color: var(--accent); }
+.project-card[data-href]:focus-visible, .timeline-item[data-href]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+.project-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 0.85rem; font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+.project-link:hover { text-decoration: underline; }
 
 /* ===== SKILLS ===== */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
@@ -377,20 +383,20 @@ footer p { font-size: 0.8rem; color: var(--text-secondary); }
       <p class="section-subtitle">Over two decades of building, shipping, and leading embedded products &mdash; each chapter brought deeper expertise and bigger challenges.</p>
     </div>
     <div class="timeline">
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">2024 &ndash; Present</div><div class="timeline-company">Kubo Care</div><div class="timeline-role">Hardware Lead</div><span class="timeline-tag">HealthTech / AI Radar</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Dec 2017 &ndash; 2024</div><div class="timeline-company">CleaErr / toN0tErr</div><div class="timeline-role">Co-founder &amp; CTO</div><span class="timeline-tag">Embedded Consulting</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">2023 &ndash; 2024</div><div class="timeline-company">I-Max</div><div class="timeline-role">Technical Consultant (via CleaErr)</div><span class="timeline-tag">Industrial Testing</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">~2023 &ndash; 2024</div><div class="timeline-company">Amberroot Systems</div><div class="timeline-role">Technical Consultant (via CleaErr)</div><span class="timeline-tag">EV / Automotive</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">May 2018 &ndash; Jan 2024</div><div class="timeline-company">SupraEnergy Lighting</div><div class="timeline-role">Design Consultant (via CleaErr)</div><span class="timeline-tag">Connected Lighting / HCL</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Mar 2022 &ndash; Sep 2022</div><div class="timeline-company">REM42 (DuroFlex)</div><div class="timeline-role">Hardware Consultant (via CleaErr)</div><span class="timeline-tag">Sleep Tech / Radar</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Feb 2019 &ndash; Oct 2020</div><div class="timeline-company">Freshot Robotics</div><div class="timeline-role">Hardware Lead (via CleaErr)</div><span class="timeline-tag">Food Robotics</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Dec 2017 &ndash; Feb 2019</div><div class="timeline-company">Tenxer Technologies</div><div class="timeline-role">Hardware Lead (via CleaErr)</div><span class="timeline-tag">Semiconductor</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Aug 2016 &ndash; Nov 2017</div><div class="timeline-company">iTriangle Infotech</div><div class="timeline-role">Architect, Embedded Systems</div><span class="timeline-tag">Vehicle Telematics</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Aug 2015 &ndash; Jun 2016</div><div class="timeline-company">Element14 / Avid Technologies</div><div class="timeline-role">Sr. Embedded Systems Engineer</div><span class="timeline-tag">IoT / Wearables</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Aug 2011 &ndash; Jul 2015</div><div class="timeline-company">Axiom Consulting</div><div class="timeline-role">Project Lead, Embedded Electronics</div><span class="timeline-tag">Medical / Industrial</span></div>
+      <div class="timeline-item reveal" data-href="https://kubocare.ai"><div class="timeline-dot"></div><div class="timeline-period">2024 &ndash; Present</div><div class="timeline-company">Kubo Care</div><div class="timeline-role">Hardware Lead</div><span class="timeline-tag">HealthTech / AI Radar</span></div>
+      <div class="timeline-item reveal" data-href="https://tonoterr.vercel.app/"><div class="timeline-dot"></div><div class="timeline-period">Dec 2017 &ndash; 2024</div><div class="timeline-company">CleaErr / toN0tErr</div><div class="timeline-role">Co-founder &amp; CTO</div><span class="timeline-tag">Embedded Consulting</span></div>
+      <div class="timeline-item reveal" data-href="https://i-max.co.in"><div class="timeline-dot"></div><div class="timeline-period">2023 &ndash; 2024</div><div class="timeline-company">I-Max</div><div class="timeline-role">Technical Consultant (via CleaErr)</div><span class="timeline-tag">Industrial Testing</span></div>
+      <div class="timeline-item reveal" data-href="https://www.amberroot.com/"><div class="timeline-dot"></div><div class="timeline-period">~2023 &ndash; 2024</div><div class="timeline-company">Amberroot Systems</div><div class="timeline-role">Technical Consultant (via CleaErr)</div><span class="timeline-tag">EV / Automotive</span></div>
+      <div class="timeline-item reveal" data-href="https://supraenergy.in/"><div class="timeline-dot"></div><div class="timeline-period">May 2018 &ndash; Jan 2024</div><div class="timeline-company">SupraEnergy Lighting</div><div class="timeline-role">Design Consultant (via CleaErr)</div><span class="timeline-tag">Connected Lighting / HCL</span></div>
+      <div class="timeline-item reveal" data-href="https://www.duroflexworld.com/"><div class="timeline-dot"></div><div class="timeline-period">Mar 2022 &ndash; Sep 2022</div><div class="timeline-company">REM42 (DuroFlex)</div><div class="timeline-role">Hardware Consultant (via CleaErr)</div><span class="timeline-tag">Sleep Tech / Radar</span></div>
+      <div class="timeline-item reveal" data-href="https://freshot.in/"><div class="timeline-dot"></div><div class="timeline-period">Feb 2019 &ndash; Oct 2020</div><div class="timeline-company">Freshot Robotics</div><div class="timeline-role">Hardware Lead (via CleaErr)</div><span class="timeline-tag">Food Robotics</span></div>
+      <div class="timeline-item reveal" data-href="https://tenxerlabs.com/"><div class="timeline-dot"></div><div class="timeline-period">Dec 2017 &ndash; Feb 2019</div><div class="timeline-company">Tenxer Technologies</div><div class="timeline-role">Hardware Lead (via CleaErr)</div><span class="timeline-tag">Semiconductor</span></div>
+      <div class="timeline-item reveal" data-href="https://www.itriangle.net/"><div class="timeline-dot"></div><div class="timeline-period">Aug 2016 &ndash; Nov 2017</div><div class="timeline-company">iTriangle Infotech</div><div class="timeline-role">Architect, Embedded Systems</div><span class="timeline-tag">Vehicle Telematics</span></div>
+      <div class="timeline-item reveal" data-href="http://www.avid-tech.com/"><div class="timeline-dot"></div><div class="timeline-period">Aug 2015 &ndash; Jun 2016</div><div class="timeline-company">Element14 / Avid Technologies</div><div class="timeline-role">Sr. Embedded Systems Engineer</div><span class="timeline-tag">IoT / Wearables</span></div>
+      <div class="timeline-item reveal" data-href="https://axiomconsult.com/"><div class="timeline-dot"></div><div class="timeline-period">Aug 2011 &ndash; Jul 2015</div><div class="timeline-company">Axiom Consulting</div><div class="timeline-role">Project Lead, Embedded Electronics</div><span class="timeline-tag">Medical / Industrial</span></div>
       <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Aug 2010 &ndash; Aug 2011</div><div class="timeline-company">SoftApps</div><div class="timeline-role">Sr. Engineer / Tech Lead</div><span class="timeline-tag">Industrial Automation</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Jul 2002 &ndash; Jul 2010</div><div class="timeline-company">Pyrodynamics</div><div class="timeline-role">Chief Engineer (8 Years)</div><span class="timeline-tag">Test &amp; Measurement</span></div>
-      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-period">Aug 2000 &ndash; Jun 2002</div><div class="timeline-company">System Controls</div><div class="timeline-role">Engineer</div><span class="timeline-tag">Defence &amp; Aerospace</span></div>
+      <div class="timeline-item reveal" data-href="https://www.pyrodynamicsindia.com/"><div class="timeline-dot"></div><div class="timeline-period">Jul 2002 &ndash; Jul 2010</div><div class="timeline-company">Pyrodynamics</div><div class="timeline-role">Chief Engineer (8 Years)</div><span class="timeline-tag">Test &amp; Measurement</span></div>
+      <div class="timeline-item reveal" data-href="https://www.systemcontrolstspl.com/"><div class="timeline-dot"></div><div class="timeline-period">Aug 2000 &ndash; Jun 2002</div><div class="timeline-company">System Controls</div><div class="timeline-role">Engineer</div><span class="timeline-tag">Defence &amp; Aerospace</span></div>
     </div>
   </div>
 </section>
@@ -405,19 +411,19 @@ footer p { font-size: 0.8rem; color: var(--text-secondary); }
       <p class="section-subtitle">Products designed, built, and shipped &mdash; from concept to production.</p>
     </div>
     <div class="projects-grid">
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://kubocare.ai">
         <div class="project-highlight">Current &bull; KuboCare</div>
         <h3>Radar-Based AI Health Monitor</h3>
         <p>Leading hardware design for millimeter-wave radar devices that contactlessly monitor vital signs, detect falls, and track sleep for seniors in living facilities.</p>
         <div class="project-tags"><span>mmWave Radar</span><span>AI/ML Edge</span><span>Embedded Linux</span><span>FDA/FCC</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://www.duroflexworld.com/">
         <div class="project-highlight">Sleep Tech &bull; REM42 / DuroFlex</div>
         <h3>Radar-Based Sleep Monitoring Device</h3>
         <p>Developed contactless radar hardware for REM42 &mdash; a DuroFlex-incubated AI sleep tech startup. The device enables non-contact detection of sleep stages, vital signs, and movement patterns for comprehensive sleep health insights without wearables.</p>
         <div class="project-tags"><span>mmWave Radar</span><span>Sleep Monitoring</span><span>Contactless Sensing</span><span>Embedded Systems</span><span>AI Sleep Tech</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://www.pyrodynamicsindia.com/">
         <div class="project-highlight">Award Winner &bull; Pyrodynamics</div>
         <h3>SCAD 508 &mdash; Strain Measurement System</h3>
         <p>8-channel system expandable to 256 channels with LabVIEW front-end. Won the Technology Development Board Award for Successful Indigenization (2013).</p>
@@ -429,43 +435,44 @@ footer p { font-size: 0.8rem; color: var(--text-secondary); }
         <p>Stand-alone test facility for control stick qualification on India's Light Combat Aircraft. PC104-based with touch screen, LVDT/RVDT data acquisition.</p>
         <div class="project-tags"><span>PC104</span><span>LVDT/RVDT</span><span>Touch Screen</span><span>Data Acquisition</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://in.element14.com/">
         <div class="project-highlight">IoT &bull; Element14 / Silicon Labs</div>
         <h3>Thunderboard Wear</h3>
         <p>ARM mbed wearable reference design board with EFM32 Giant Gecko, BLE connectivity, 9-axis IMU, and heart rate sensor. Full HW design + firmware.</p>
         <div class="project-tags"><span>EFM32</span><span>BLE BGM111</span><span>mbedOS</span><span>OrCAD</span><span>Cadence Allegro</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://www.stempeutics.com/">
         <div class="project-highlight">Medical &bull; Stempeutics</div>
         <h3>Stempeutron &mdash; SVF Cell Isolation</h3>
         <p>Automated medical device for isolating stromal vascular fraction (SVF) cells from fat tissue at point-of-care, for Stempeutics Research (Manipal/Cipla).</p>
         <div class="project-tags"><span>Medical Device</span><span>Motor Control</span><span>Process Automation</span></div>
+        <a class="project-link" href="https://www.indiamart.com/proddetail/stempeutron-6935713197.html" target="_blank" rel="noopener">View Stempeutron product &#8599;</a>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://freshot.in/">
         <div class="project-highlight">Startup &bull; Freshot Robotics</div>
         <h3>Idli ATM &mdash; Automated Food Robot</h3>
         <p>Fully automated cooking and vending machine for South Indian breakfast. Went viral at Bangalore metro stations. 72 idlis per cycle, QR ordering, contactless.</p>
         <div class="project-tags"><span>Robotics</span><span>Motor Control</span><span>IoT</span><span>Sensors</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://www.amberroot.com/">
         <div class="project-highlight">EV / Automotive &bull; Amberroot Systems</div>
         <h3>EV Motor Drive &amp; CAN Systems</h3>
         <p>EV motor drive development, motor test jig, CAN-based IoT data logger, CAN isolator integration, rotary position sensor, and EV drive compliance testing for CE and RE certification standards.</p>
         <div class="project-tags"><span>EV Motor Drive</span><span>CAN Bus</span><span>IoT Logger</span><span>EMI/EMC (CE/RE)</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://i-max.co.in">
         <div class="project-highlight">Industrial &bull; I-Max</div>
         <h3>Solenoid Coil Test Automation</h3>
         <p>Automated testing system for solenoid coil manufacturing. Customer interaction on technical queries and solutions for industrial solenoid applications.</p>
         <div class="project-tags"><span>Test Automation</span><span>Solenoid</span><span>Manufacturing</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://supraenergy.in/">
         <div class="project-highlight">Lighting &bull; SupraEnergy (2018&ndash;2024)</div>
         <h3>Connected Lighting &amp; HCL Systems</h3>
         <p>Designed IoT-connected lighting with Human Centric Lighting control &mdash; Circadian rhythm-based color temperature auto-tuning. Built burn-in test automation (power, lux, endurance) and a goniophotometer for angular light intensity measurement.</p>
         <div class="project-tags"><span>HCL</span><span>IoT Lighting</span><span>Burn-in Testing</span><span>Goniophotometry</span><span>LED Drivers</span></div>
       </div>
-      <div class="project-card reveal">
+      <div class="project-card reveal" data-href="https://www.pyrodynamicsindia.com/products-services">
         <div class="project-highlight">International &bull; Germany Exhibition</div>
         <h3>SCAD 500 &mdash; Strain Measurement System</h3>
         <p>4-channel strain measurement system for BHEL and BARC. The only Indian-designed instrument exhibited at a prestigious German measurement exhibition.</p>
@@ -651,6 +658,24 @@ window.addEventListener('scroll', () => {
   });
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+
+// Clickable cards / timeline items -> open company sites in a new tab
+document.querySelectorAll('[data-href]').forEach(el => {
+  const url = el.getAttribute('data-href');
+  el.setAttribute('role', 'link');
+  el.setAttribute('tabindex', '0');
+  const label = el.querySelector('h3, .timeline-company');
+  if (label) el.setAttribute('aria-label', label.textContent.trim() + ' – opens website in a new tab');
+  const open = () => window.open(url, '_blank', 'noopener');
+  el.addEventListener('click', (e) => {
+    if (e.target.closest('a')) return; // let inner links (e.g. product page) work normally
+    open();
+  });
+  el.addEventListener('keydown', (e) => {
+    if (e.target.closest('a')) return;
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
   });
 });
 </script>
